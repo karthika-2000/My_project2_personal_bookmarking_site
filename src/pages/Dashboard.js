@@ -23,6 +23,10 @@ const Dashboard = () => {
   );
 
   const handleDelete = (index) => {
+
+
+
+
     const confirmDelete = window.confirm('Are you sure you want to delete this bookmark?')
     if(confirmDelete){
         dispatch(deleteBookmark({ user, index }));

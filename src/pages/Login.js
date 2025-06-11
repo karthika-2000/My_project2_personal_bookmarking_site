@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { login } from '../features/auth/Authslice';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-
+import { Link } from 'react-router-dom';
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -52,6 +52,15 @@ const Login = () => {
             />
             <button type="submit" className="btn btn-success w-100">Login</button>
           </form>
+
+             <div className='text-center align-items-center mt-3 border-top pt-3'>
+                      <p className='mb-0'>
+                        New user? {''}
+                        <Link to={"/signup"} className='text-primary text-decoration-none'>
+                            Sign up here
+                        </Link>
+                      </p>
+                    </div>
         </div>
       </div>
     </>
